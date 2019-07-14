@@ -48,7 +48,7 @@ public class UserController {
                 password.matches("(?=.*[~!@#$%^&*()_-]).*")
         ) {
             userService.registerUser(user);
-            return "redirect:/users/login";
+            return "/users/login";
         }
         String error = "Password must contain atleast 1 alphabet, 1 number & 1 special character";
         model.addAttribute("passwordTypeError", error);
